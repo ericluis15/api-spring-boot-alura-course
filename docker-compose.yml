@@ -1,0 +1,19 @@
+version: '3.9'
+
+volumes:
+  mysql_data: {}
+
+services:
+  mysql:
+    container_name: mysql_spi_spring
+    image: mysql:8.0
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: api_spring
+      MYSQL_DATABASE: api_spring
+      MYSQL_USER: api_spring
+      MYSQL_PASSWORD: api_spring
+    command: --default-authentication-plugin=mysql_native_password
+    volumes:
+      - mysql_data:/var/lib/mysql

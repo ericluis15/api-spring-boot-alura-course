@@ -5,7 +5,7 @@ volumes:
 
 services:
   mysql:
-    container_name: mysql_spi_spring
+    container_name: mysql_api_spring
     image: mysql:8.0
     ports:
       - "3307:3306"
